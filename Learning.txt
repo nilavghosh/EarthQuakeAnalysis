@@ -1,0 +1,6 @@
+geojson vs pygeoj library
+https://pypi.python.org/pypi/geojson
+https://thepythongischallenge.wordpress.com/2014/07/25/pygeoj-a-simple-python-geojson-file-reader-and-writer/
+
+Eathquake properties
+http://earthquake.usgs.gov/data/comcat/data-eventterms.php#mag
