@@ -87,3 +87,9 @@ ENV/
 
 # Rope project settings
 .ropeproject
+.idea/EarthQuakeAnalysis.iml
+earthquake_2016.p
+earthquake_2016.tsv
+earthquake_Jan2016.p
+earthquake_Jan2016.tsv
+earthquake_Jan2016_smaller.tsv
