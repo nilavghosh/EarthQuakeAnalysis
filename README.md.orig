@@ -1,0 +1,34 @@
+# EarthQuakeAnalysis
+
+<<<<<<< HEAD
+Python version **3.5**
+=======
+Python version 3.5
+>>>>>>> b77215f75ae0f7d7c24416ca5eb655884c2a6979
+Required libraries (may be installed using pip install {libraryname}
+
+folium
+behave
+pandas
+numpy
+geojson
+pickle
+matplotlib
+dateutil
+requests
+
+Run analysis as under
+
+<<<<<<< HEAD
+**python QuakeAnalysis.py {starttime} {endtime}**
+startime and endtime are in the format yyyy-mm-dd
+
+Eg.
+**python QuakeAnalysis.py 2016-01-01 2016-03-21**
+=======
+python QuakeAnalysis.py {starttime} {endtime}
+startime and endtime are in the format yyyy-mm-dd
+
+Eg.
+python QuakeAnalysis.py 2016-01-01 2016-03-21
+>>>>>>> b77215f75ae0f7d7c24416ca5eb655884c2a6979
