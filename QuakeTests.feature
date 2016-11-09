@@ -3,8 +3,8 @@ Feature: Testing Earthquake Analysis
   # Enter feature description here
 
   Scenario: Check EarthQuake Count
-    Given starttime is 2016-01-01
-    And endtime is 2016-01-05
+    Given starttime is 2016-03-01
+    And endtime is 2016-03-31
     When we fetch the earthquakes in that duration
     Then we check if we have got the correct count
 

@@ -10,7 +10,7 @@ from datetime import datetime, timedelta
 import datetime as dt
 import folium
 from folium import plugins
-import matplotlib
+import mpld3
 import matplotlib.pyplot as plt
 
 BASE_URL = url = 'http://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&starttime=%s&endtime=%s'
@@ -66,7 +66,6 @@ def getQuakeDfFromData(quakes):
     df_sorted = df.sort_index()
     return df_sorted
 
-
 def plotEarthquakesMagHM(df):
     # Using USGS style tile
     url_base = 'http://server.arcgisonline.com/ArcGIS/rest/services/'
@@ -97,6 +96,33 @@ def plotEQCountByMonth(df):
     plot.set(xlabel="Months", ylabel="No. of EarthQuakes")
     plt.show()
 
+def plotEQ_Sig_vs_Mag(df):
+    fig, ax = plt.subplots(subplot_kw=dict(axisbg='#EEEEEE'))
+
+    # s=1000 * np.random.random(size=N),
+
+    mag_np = df[['mag']].ix[0:, 0].as_matrix()
+    sig_np = df[['sig']].ix[0:, 0].as_matrix()
+    time_np = np.array(df.index.astype(np.str))
+    # df[['time']].ix[0:,0].as_matrix()
+    N = len(sig_np)
+
+    scatter = ax.scatter(mag_np,
+                         sig_np,
+                         c=np.random.random(size=N),
+                         alpha=0.3,
+                         cmap=plt.cm.jet)
+    ax.grid(color='white', linestyle='solid')
+    ax.set_autoscale_on(False)
+
+    ax.set_title("Magnitude(mag) vs Significance(sig)- Time as tooltip", size=20)
+    ax.set_xlabel("Magnitude in Richter scale")
+    ax.set_ylabel("Significance")
+    labels = [str(time_np[i]) for i in range(N)]
+    tooltip = mpld3.plugins.PointLabelTooltip(scatter, labels=labels)
+    mpld3.plugins.connect(fig, tooltip)
+    mpld3.show(port=8990)
+
 if __name__ == "__main__":
     if len(sys.argv)!= 3:
         print('Incorrect number of arguments. Enter starttime and endtime')
@@ -108,6 +134,7 @@ if __name__ == "__main__":
             quakeRawData = getEarthquakeData(starttime,endtime)
             quake_df = getQuakeDfFromData(quakeRawData)
             plotEQCountByMonth(quake_df)
+            plotEQ_Sig_vs_Mag(quake_df)
 
             # Interesting to see the "Ring of Fire" - https://en.wikipedia.org/wiki/Ring_of_Fire
             # Look for a file mag_heatmap.html created in the same directory and open it in chrome
