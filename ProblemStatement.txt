@@ -1,1 +1,44 @@
-https://mail.google.com/mail/u/0/#inbox/158067afaa5467fe
+Hi Nilav, nice speaking to you. Please find below the exercise I mentioned.  Please do not forward. Realise you have exams shortly so please keep me updated on how you get on and don’t hesitate to get in touch with any queries.
+
+Earthquake visualisation exercise
+
+Implement the following in Python.  Follow the same practices you would apply to production-standard code.
+
+1)      Take a look at this site for the US Geological Service Rest API for earthquakes.  These APIs are publically available and free to use.
+
+2)      Create a request that returns all earthquake data for Jan 2016  in geojson format
+
+3)      Call this request from Python and store the results in a suitable Python data structure.
+
+4)      Extend the code to pick up all earthquake data for 2016 – note this cannot be done in a single call, as there is a limit of 20,000 events per request
+
+5)      Use a suitable Python visualisation library e.g. matplotlib, to visualise the data. Use your creativity and see whether there are any conclusions you can draw from the data
+
+Preferred Python version is 3.4 or above.
+
+Notes – it is very easy to write Python code quickly that doesn’t work in a production situation. In particular I will be looking for any techniques used to make the code of production quality.  I will also be looking for creativity in visualisation. Finally the development team use Pandas. If you are able to adapt to demonstrate use of Pandas Dataframes, that is a bonus.
+
+John
+
+
+
+
+
+When: 09 November 2016 12:00-12:30 (UTC) Dublin, Edinburgh, Lisbon, London.
+
+Where: Webex and dial-in in calendar
+
+Note: The GMT offset above does not reflect daylight saving time adjustments.
+
+*~*~*~*~*~*~*~*~*~*
+
+Webex link including call-back and dial-in details
+
+https://barclaysgroup.webex.com/meet/G09975123
+
+Conference code: 331511
+Leader PIN: 802044
+
+UK Toll Free: 0800 376 3076
+
+India, toll-free - 0008001005817
